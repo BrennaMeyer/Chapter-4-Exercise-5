@@ -24,7 +24,23 @@ int main()
         Weight,
         Height;
 
+    cout << "Enter weight (in pounds):" << endl;
+    cin >> Weight;
 
+    cout << "Enter height (in inches, example. 2' 9\"=33 inches)" << endl;
+    cin >> Height;
+
+    BMI = Weight * (730 / pow(Height, 2));
+    cout << "BMI=" << BMI << endl;
+
+    if (BMI >= 18.5 && BMI <= 25)
+        cout << "Weight optimal." << endl;
+    else if (BMI >= 0 && BMI <= 18.5)
+        cout << "Under weight." << endl;
+    else if (BMI >= 25)
+        cout << "Overweight." << endl;
+
+    return 0;
 }
 
 
